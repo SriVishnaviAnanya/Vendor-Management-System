@@ -1,0 +1,37 @@
+# Visual Studio user-specific files
+.vs/
+*.user
+*.suo
+
+# Build results
+bin/
+obj/
+out/
+
+# NuGet packages
+*.nupkg
+packages/
+*.snupkg
+
+# Visual Studio Code settings
+.vscode/
+
+# Rider settings
+.idea/
+
+# User-specific files
+*.userosscache
+*.sln.docstates
+
+# Dotnet watch/EF Core
+*.dbmdl
+
+# Logs
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Others
+*.swp
