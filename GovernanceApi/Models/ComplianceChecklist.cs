@@ -11,7 +11,7 @@ namespace GovernanceApi.Models
         public int ComplianceId { get; set; }
         public int VendorId { get; set; }
         public bool NDASigned { get; set; }
-        public bool CertificationsValid { get; set; }   
+        public bool CertificationsValid { get; set; }
         public bool RegulatoryCompliant { get; set; }
         public int ComplianceScore { get; set; }
         public string ComplianceStatus { get; set; }

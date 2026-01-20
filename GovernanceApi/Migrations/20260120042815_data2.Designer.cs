@@ -4,6 +4,7 @@ using GovernanceApi.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GovernanceApi.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260120042815_data2")]
+    partial class data2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -81,9 +84,6 @@ namespace GovernanceApi.Migrations
                     b.Property<bool>("Escalated")
                         .HasColumnType("bit");
 
-                    b.Property<int>("Penalty")
-                        .HasColumnType("int");
-
                     b.Property<string>("Reason")
                         .IsRequired()
                         .HasMaxLength(1000)
@@ -120,6 +120,9 @@ namespace GovernanceApi.Migrations
                         .HasColumnType("int");
 
                     b.Property<int>("DeliveryQuality")
+                        .HasColumnType("int");
+
+                    b.Property<int>("FinalRating")
                         .HasColumnType("int");
 
                     b.Property<decimal>("FinalScore")

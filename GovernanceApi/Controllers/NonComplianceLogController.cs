@@ -27,15 +27,22 @@ namespace GovernanceApi.Controllers
 
         // POST: api/NonComplianceLog
         // This lets you add new logs via Swagger
+       
         [HttpPost]
-        public IActionResult AddLog([FromBody] NonComplianceLog log)
+        public IActionResult AddNonComplianceLog([FromBody] NonComplianceLog log)
         {
-            // Optional: Set default date if user doesn't provide it
-            if (log.CreatedDate == default)
+            if(log.CreatedDate == default)
             {
-                log.CreatedDate = System.DateTime.Now;
+                log.CreatedDate = DateTime.Now;
             }
-
+            if (log.Severity?.Trim().ToLower()=="major")
+            {
+                log.Penalty = 20;
+            }
+            else
+            {
+                log.Penalty = 5;
+            }
             _context.NonComplianceLogs.Add(log);
             _context.SaveChanges();
             return Ok(log);

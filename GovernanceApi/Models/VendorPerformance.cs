@@ -11,8 +11,12 @@ namespace GovernanceApi.Models
         public int SLAAdherence { get; set; }
         public string SLARemarks { get; set; }  
         public int ComplianceScore { get; set; }
-        public int IssueCount { get; set; } 
-        public int FinalRating  { get; set; }
+        public int IssueCount { get; set; }
+        //public int FinalRating { get; set; }
+        public int Penalty { get; set; }
+        public decimal  FinalScore { get; set; }
+        public string VendorRating { get; set; }
+        public DateTime CalculatedDate { get; set; } = DateTime.Now;
         public DateTime SLARatedDate { get; set; }
     }
 }

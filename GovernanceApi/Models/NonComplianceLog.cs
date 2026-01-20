@@ -11,5 +11,8 @@ namespace GovernanceApi.Models
         public string Reason { get; set; }
         public bool Escalated { get; set; }
         public DateTime CreatedDate { get; set; }
+        public string Severity { get; set; }
+        public int Penalty { get; set; }
+
     }
 }
