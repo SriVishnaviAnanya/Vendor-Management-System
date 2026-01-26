@@ -1,0 +1,6 @@
+@Dev3_Contract_HostAddress = http://localhost:5260
+
+GET {{Dev3_Contract_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
